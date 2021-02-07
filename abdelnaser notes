@@ -1,0 +1,5 @@
+Pcap > records of network traffic > wireshark - tcpdump - tshark
+for network > pcap files  : full packet capture (all info about layers 0-7 )
+            > zeek logs   : take info from pcap > logs 
+            > netflow     : log > s_ip , s_port , d_ip , d_port
+brim > pcap to zeek logs ( zeek query lang )
