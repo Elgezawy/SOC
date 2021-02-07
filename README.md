@@ -1,6 +1,10 @@
 # SOC
-(ZEEK LOGS)..
 
+pcap is an application programming interface (API) for capturing network traffic. ... 
+PCAP file creates a record of network data that you can view through Wireshark
+
+(ZEEK LOGS)..
+formerly Bro)[2] is a free and open-source software network analysis framework
 Zeek sits on a “sensor,” a hardware, software, virtual,
  or cloud platform that quietly and unobtrusively observes network traffic. 
 Zeek interprets what it sees and creates compact,
@@ -30,3 +34,10 @@ this file
 zeek -r smallFlows.pcap
 
 ₩ list files generated with zeex: ls
+
+...........................
+
+( BRIM )
+-you can open a pcap with Brim and it will transform the pcap into Zeek logs in the ZNG format
+
+-Wireshark has one glaring flaw--it doesn't handle large capture files with much grace
