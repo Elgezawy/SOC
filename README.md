@@ -41,3 +41,9 @@ zeek -r smallFlows.pcap
 -you can open a pcap with Brim and it will transform the pcap into Zeek logs in the ZNG format
 
 -Wireshark has one glaring flaw--it doesn't handle large capture files with much grace
+
+
+
+
+
+
