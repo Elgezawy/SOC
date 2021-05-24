@@ -1,0 +1,40 @@
+#Time Stamp Analysis:
+-when files are created, modified, or accessed and when the filesystem structures that contain the metadata for those files are changed.
+-UNIX and Linux : atime records the time the file was last accessed.
+                : mtime records the most recent modification to the contents of the file
+                : ctime records the most recent change to the file's metadata such as ownership, filename, file location, or file permissions
+-WINDOWS: /NTFS/: $MFT store medta data
+                : $STANDARD_INFORMATION :read only, hidden, archive, time stamps
+                : $FILE_NAME :  full Unicode name of the file
+                : $DATA more than one : stores the data itself
+-alternate data streams (ADSs) used to hide additional data within the filesystem and are used by browsers to track files that were downloaded from the Internet
+-NtfsDisableLastAccessUpdate >>> HKLM\SYSTEM\CurrentControlSet\Control\FileSystem registry key
+-time stamps of files often only modify the time stamps in the $STANDARD_INFORMATION
+-information about user activity, including files opened, applications launched, and more, may be found in the user's home directory in the AppData\Local\ConnectedDevicesPlatform\L.%USERNAME%\ActivitiesC ache.db database
+-Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Recent  >> viewed in Windows Explorer, the name of the folder will appear as Recent Items
+-Windows 10, the LNK files are created when a file is opened or a new file is created include the original extension
+-Prefetch, which recorded the files needed by each application on the system and preloaded those files once the application was launched in
+-security identifier (SID) responsible for launching the executable, the volume of data accessed on disk by the executable, CPU time in foreground and background,
+  HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\SRUM\Extensions 
+#Registry Analysis:
+%SystemRoot%\System32\Config // SYSTEM, SAM, SECURITY, SOFTWARE, and DEFAULT hive files
+user account also has associated registry hive files called NTUSER.DAT
+MRU: HKEY_USERS\SID\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs 
+Registry Explorer used to view the Run key for unauthorized executables
+executables that have
+been run on the system in the 
+  HKLM\SYSTEM\CurrentControlSet\Services\bam\UserSettings
+  HKEY_USERS\SID\Software\Microsoft\Windows\CurrentVersion\Search\RecentApps >>> 
+#EVIDENCE OF EXECUTION >> Amcache ,UserAssist,ActivitiesCache,prefetch,AppCompatCache
+$UsnJrnl $J file: e USN journal can provide information such as when files were created, renamed (including moved), or changed. For renames, both the old and the new names are recorded
+Volume Shadow Copies VSS: backups of files, even protected system files stored in System Volume Information >> vssadmin 
+#linux forinces:
+- /etc/passwd
+- /etc/group
+- /etc/sudoers : modified to allow user accounts to increase their privileges through the sudo command
+- Persistence : initialization scripts run to start processes
+
+
+
+
+
