@@ -1,3 +1,16 @@
+1-Forensics Tools
+2-Time Stamp Analysis
+3-Link Files and Jump Lists
+4-Prefetch
+5-System Resource Usage Monitor
+6-Registry Analysis
+7-Browser Activity
+8-USN Journal
+9-Volume Shadow Copies
+10-Automated Triage
+11-Linux/UNIX System Artifacts
+
+
 #Time Stamp Analysis:
 -when files are created, modified, or accessed and when the filesystem structures that contain the metadata for those files are changed.
 -UNIX and Linux : atime records the time the file was last accessed.
